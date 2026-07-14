@@ -208,28 +208,44 @@ h2{
     align-items:center;
 }
 
-.github-link{
-    font-size:13px;
-    color:#38bdf8;
-    text-decoration:none;
-    border:1px solid #38bdf8;
-    padding:5px 12px;
-    border-radius:15px;
+.github-link img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    object-fit:cover;
+    transition:0.3s;
 }
 
-.github-link:hover{
-    background:#38bdf8;
-    color:#0f172a;
+.github-link img:hover{
+    transform:scale(1.15);
+    box-shadow:0 0 15px rgba(56,189,248,0.6);
 }
 
 /* Contact */
-.contact{
-    text-align:center;
+.contact p{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin:18px 0;
 }
 
-.contact p{
-    margin:10px 0;
+.contact-icon{
+    width:35px;
+    height:35px;
+    object-fit:cover;
+    border-radius:50%;
 }
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.contact a:hover{
+    text-decoration:underline;
+}
+
 
 /* Footer */
 footer{
@@ -436,7 +452,8 @@ footer:hover{
         <h3>
         React Native Mobile Application
         <a href="https://github.com/bhaskarBhatt1008/reactnativeapp" target="_blank" class="github-link">
-            GitHub
+            <img src="images/github.png" alt="GitHub">
+        
         </a>
        </h3>
 
@@ -454,7 +471,8 @@ footer:hover{
         <h3>
         School Management System
         <a href="https://github.com/BhaskarBhatt1008/school-management-system" target="_blank" class="github-link">
-            GitHub
+            <img src="images/github.png" alt="GitHub">
+            
         </a>
         </h3>
 
@@ -472,7 +490,8 @@ footer:hover{
             <h3>
             Fake News Detection System
             <a href="https://github.com/BhaskarBhatt1008/fake-news-detection-system" target="_blank" class="github-link">
-                GitHub
+                <img src="images/github.png" alt="GitHub">
+                
             </a>
         </h3>
             <p>
@@ -490,7 +509,8 @@ footer:hover{
             <h3>
             Smart City Traffic Forecasting System
             <a href="https://github.com/BhaskarBhatt1008/smart-city-traffic-forecasting" target="_blank" class="github-link">
-                GitHub
+                <img src="images/github.png" alt="GitHub">
+                
             </a>
         </h3>
 
@@ -515,26 +535,28 @@ footer:hover{
 
     <div class="contact">
 
-        <p>
-    📧 
-    <a href="mailto:bhaskarbhatt995@gmail.com" style="color:#38bdf8;">
-        bhaskarbhatt995@gmail.com
-    </a>
+    <p>
+        <img src="images/gmail.png" class="contact-icon">
+        <a href="mailto:bhaskarbhatt995@gmail.com">
+            bhaskarbhatt995@gmail.com
+        </a>
     </p>
-        <p>
-    💻 
-    <a href="https://github.com/BhaskarBhatt1008" target="_blank" style="color:#38bdf8;">
-        github.com/BhaskarBhatt
-    </a>
-    </p>
-        <p>
-    🔗 
-    <a href="https://www.linkedin.com/in/bhaskar-bhatt-606629252/" target="_blank" style="color:#38bdf8;">
-        linkedin.com/in/BhaskarBhatt
-    </a>
-</p>
 
-    </div>
+    <p>
+        <img src="images/github.png" class="contact-icon">
+        <a href="https://github.com/BhaskarBhatt1008" target="_blank">
+            github.com/BhaskarBhatt1008
+        </a>
+    </p>
+
+    <p>
+        <img src="images/linkedin.png" class="contact-icon">
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+            linkedin.com/in/yourusername
+        </a>
+    </p>
+
+</div>
 
 </section>
 
