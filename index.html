@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhaskar Bhatt | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+/* Navbar */
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    padding:10px 18px;
+    border-radius:25px;
+    transition:0.4s;
+}
+
+nav a:hover,
+nav a.active{
+    background:#38bdf8;
+    color:#0f172a;
+    box-shadow:0 0 15px rgba(56,189,248,0.5);
+}
+
+/* Sections */
+section{
+    padding:80px 10%;
+    scroll-margin-top:90px;
+    border-radius:20px;
+    transition:all 0.5s ease;
+}
+
+/* Active Section Highlight */
+section.active-section{
+    background:#182235;
+    border-left:5px solid #38bdf8;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* Hero */
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.hero-image img{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #38bdf8;
+    box-shadow:0 0 30px rgba(56,189,248,0.5);
+    transition:0.4s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.05);
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero-content span{
+    color:#38bdf8;
+}
+
+.hero-content p{
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Headings */
+h2{
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:40px;
+}
+
+/* About */
+.about-text{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    color:#d1d5db;
+}
+
+/* Skills */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:25px;
+}
+
+.skill-box{
+    background:#1e293b;
+    padding:25px 15px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.skill-box:hover{
+    transform:translateY(-8px);
+    background:#243247;
+}
+
+.skill-box img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    margin-bottom:12px;
+}
+
+.skill-box p{
+    color:white;
+    font-weight:bold;
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:#243247;
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.github-link{
+    font-size:13px;
+    color:#38bdf8;
+    text-decoration:none;
+    border:1px solid #38bdf8;
+    padding:5px 12px;
+    border-radius:15px;
+}
+
+.github-link:hover{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111827;
+    margin-top:40px;
+    color:#cbd5e1;
+    overflow:hidden;
+}
+
+footer{
+    animation: fadeUp 1.5s ease;
+}
+
+footer:hover{
+    color:#38bdf8;
+    letter-spacing:1px;
+    transition:0.4s;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .hero-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-image img{
+        width:220px;
+        height:220px;
+    }
+
+    nav{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo"><i>Bhaskar</i></div>
+
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Home -->
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div class="hero-image">
+            <img src="images/profile.jpg" alt="Bhaskar Bhatt">
+        </div>
+
+        <div class="hero-content">
+
+            <h1>Hi, I'm <span>Bhaskar Bhatt</span></h1>
+
+            <p>
+                Computer Science Engineering Student passionate about
+                Backend Development, Web Technologies, and building
+                scalable software solutions.
+            </p>
+
+            <a href="Bhaskar persuing.pdf" class="btn" download>
+                Explore My Resume
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About -->
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p class="about-text">
+        I am a motivated and enthusiastic Computer Science Engineering
+        student currently pursuing B.Tech after completing a Diploma
+        in Computer Science Engineering. I have knowledge of HTML,
+        CSS, SQL, PHP, React Native, Java and Python along with a
+        strong interest in Machine Learning and Data Science.
+    </p>
+
+</section>
+
+<!-- Skills -->
+<section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill-box">
+            <img src="images/html.png" alt="HTML">
+            <p>HTML</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/css.png" alt="CSS">
+            <p>CSS</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/php.png" alt="PHP">
+            <p>PHP</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/sql.png" alt="SQL">
+            <p>SQL</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/react.png" alt="React Native">
+            <p>React Native</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/java.png" alt="Java">
+            <p>Java</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/python.png" alt="Python">
+            <p>Python</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/ml.png" alt="Machine Learning">
+            <p>Machine Learning</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/pandas.png" alt="Pandas">
+            <p>Pandas</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/numpy.png" alt="NumPy">
+            <p>NumPy</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/sklearn.png" alt="Scikit Learn">
+            <p>Scikit Learn</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/nltk.png" alt="NLTK">
+            <p>NLTK</p>
+        </div>
+
+        <div class="skill-box">
+            <img src="images/github.png" alt="GitHub">
+            <p>GitHub</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Projects -->
+<!-- Projects -->
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+
+        <h3>
+        React Native Mobile Application
+        <a href="https://github.com/bhaskarBhatt1008/reactnativeapp" target="_blank" class="github-link">
+            GitHub
+        </a>
+       </h3>
+
+            <p>
+                Developed a cross-platform mobile application using React Native.
+                Implemented responsive UI components, navigation, and mobile
+                application features for better user experience.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+        <h3>
+        School Management System
+        <a href="https://github.com/BhaskarBhatt1008/school-management-system" target="_blank" class="github-link">
+            GitHub
+        </a>
+        </h3>
+
+            <p>
+                Developed a web-based School Management System to manage
+                student records, teacher details, attendance, and academic
+                information efficiently.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+            Fake News Detection System
+            <a href="https://github.com/BhaskarBhatt1008/fake-news-detection-system" target="_blank" class="github-link">
+                GitHub
+            </a>
+        </h3>
+            <p>
+                Developed an NLP-based machine learning model to classify
+                news articles as real or fake with confidence prediction.
+                Performed text preprocessing, feature extraction, and model
+                evaluation using machine learning techniques.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+            Smart City Traffic Forecasting System
+            <a href="https://github.com/BhaskarBhatt1008/smart-city-traffic-forecasting" target="_blank" class="github-link">
+                GitHub
+            </a>
+        </h3>
+
+            <p>
+                Building a predictive system for forecasting traffic
+                congestion using machine learning algorithms.
+                The system analyzes traffic patterns to improve
+                transportation management.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="contact">
+
+        <p>
+    📧 
+    <a href="mailto:bhaskarbhatt995@gmail.com" style="color:#38bdf8;">
+        bhaskarbhatt995@gmail.com
+    </a>
+    </p>
+        <p>
+    💻 
+    <a href="https://github.com/BhaskarBhatt1008" target="_blank" style="color:#38bdf8;">
+        github.com/BhaskarBhatt
+    </a>
+    </p>
+        <p>
+    🔗 
+    <a href="https://www.linkedin.com/in/bhaskar-bhatt-606629252/" target="_blank" style="color:#38bdf8;">
+        linkedin.com/in/BhaskarBhatt
+    </a>
+</p>
+
+    </div>
+
+</section>
+
+<footer>
+    Thank you for visiting my portfolio 🚀 | Bhaskar Bhatt
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 200;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+            window.pageYOffset >= sectionTop &&
+            window.pageYOffset < sectionTop + sectionHeight
+        ) {
+            current = section.id;
+            section.classList.add("active-section");
+        } else {
+            section.classList.remove("active-section");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
